@@ -1,0 +1,23 @@
+* {
+    position: relative;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+.hitbox {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: white;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    transition: 250ms opacity;
+}
+.hitbox.hidden {
+    opacity: 0;
+}

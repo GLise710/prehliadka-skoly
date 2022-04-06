@@ -1,0 +1,58 @@
+{
+    "scenes": [
+        {
+            "name": "vestibul",
+            "location": "Vestibul",
+            "source": "scenes/vestibul.mp4",
+            "hitboxes": [
+                {
+                    "type": "video",
+                    "point": [0, 0, 1],
+                    "target": "dejepis"
+                },
+                {
+                    "type": "move",
+                    "point": [0, 0.1, 1],
+                    "target": "vestibul"
+                }
+            ]
+        },
+        {
+            "name": "pred_ZBOROVNOU",
+            "location": "Pred zborovňou",
+            "source": "scenes/pred_ZBOROVNOU.mp4",
+            "hitboxes": [
+                {
+                    "type": "video",
+                    "point": [0, 1, -1],
+                    "target": "dejepis"
+                },
+                {
+                    "type": "move",
+                    "point": [1, 2, 3],
+                    "target": "vestibul"
+                }
+            ]
+        }
+
+    ],
+    
+    "videos": [
+        {
+            "name": "dejepis",
+            "source": "videos/RenderThis_2.mp4",
+            "texts": [
+                {
+                    "text": "Hello, nič nestíhame, ale baví nas to. Don't worry.",
+                    "time": 5000,
+                    "duration": 4000
+                },
+                {
+                    "text": "Be ruski.",
+                    "time": 10000,
+                    "duration": 5000
+                }
+            ]
+        }
+    ]
+}

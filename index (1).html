@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Virtuálna prehliadka</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/video.js@7.17.0/dist/video-js.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/videojs-vr@1.7.1/dist/videojs-vr.css" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/video.js@7.17.0/dist/video.js"></script>
+		<script src="/node_modules/videojs-vr/dist/videojs-vr.js"></script>
+
+		<video crossorigin="anonymous" width="1375" height="500" id="videojs-vr-player" class="video-js vjs-default-skin" playsinline>
+			<!-- <!source src="https://webvr.info/samples/media/textures/vr_bench_man.mp4" type="video/mp4"> -->
+			<!-- <source src="shore.jpeg" type="image/jpeg"> -->
+			<!-- <source id="source-360" src="CHLAPCENSKE_ZACHODY_druhe_poschodie.mp4" type="video/mp4"> -->
+		</video>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script>
+			(async function(window, videojs){
+				window.addEventListener("click", event => {
+					console.log(event.clientX, event.clientY);
+				});
+				const playerElement = document.getElementById("videojs-vr-player");
+
+				playerElement.width = window.innerWidth;
+				playerElement.height = window.innerHeight;
+
+				var player = window.player = videojs('videojs-vr-player');
+				player.mediainfo = player.mediainfo || {};
+				player.mediainfo.projection = '360';
+				// AUTO is the default and looks at mediainfo
+				var vr = window.vr = player.vr({projection: '360', forceCardboard: false});
+
+				
+
+				setTimeout(() => {
+					// player.play();
+					Projector.updateFov(window.innerWidth, window.innerHeight);
+				}, 1000);
+
+				
+
+				// setInterval(() => {
+				// 	//console.log(screenEdgeX, screenEdgeY);
+				// 	const rotationMatrix = Projector.rotationMatrix(vr.cameraVector);
+				// 	const rotated = Projector.rotatePoint({x: -1, y: -0.5, z: 0.000001}, rotationMatrix);
+				// 	//console.log("rotated", rotated);
+				// 	const pointInPlane = Projector.projectPoint(rotated);
+				// 	const screenPoint = Projector.planeToScreen(pointInPlane);
+
+				// 	const test = document.getElementById("test");
+				// 	test.style.left = screenPoint.x + "px";
+				// 	test.style.bottom = screenPoint.y + "px";
+
+				// 	test.hidden = rotated.z < v;
+
+				// 	//console.log("v", v);
+
+				// 	//console.log(rotated, pointInPlane, screenEdgeX, screenEdgeY);
+
+				// 	test.style.opacity = 1 - Math.sqrt(pointInPlane.x ** 2 + pointInPlane.y ** 2) / Math.sqrt(screenEdgeX ** 2 + screenEdgeY ** 2);
+				// }, 100);
+
+
+			}(window, window.videojs))
+		</script>
+
+		<script src="index.js"></script>
+	</body>
+</html>
