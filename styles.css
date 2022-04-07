@@ -13,11 +13,20 @@ body {
     height: 48px;
     border-radius: 50%;
     background-color: white;
-    pointer-events: none;
     transform: translate(-50%, -50%);
 
-    transition: 250ms opacity;
+    transition: 150ms opacity;
 }
 .hitbox.hidden {
     opacity: 0;
+}
+.tooltip {
+    position: absolute;
+    top: -55%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 125%;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
 }

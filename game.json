@@ -6,15 +6,12 @@
             "source": "scenes/vestibul.mp4",
             "hitboxes": [
                 {
-                    "type": "video",
-                    "point": [0, 0, 1],
-                    "target": "dejepis"
-                },
-                {
                     "type": "move",
-                    "point": [0, 0.1, 1],
-                    "target": "vestibul"
+                    "point": [1, -0.1, 1],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
                 }
+                
             ]
         },
         {
@@ -24,13 +21,50 @@
             "hitboxes": [
                 {
                     "type": "video",
-                    "point": [0, 1, -1],
+                    "point": [0, 0, 1],
                     "target": "dejepis"
                 },
                 {
                     "type": "move",
-                    "point": [1, 2, 3],
-                    "target": "vestibul"
+                    "point": [-1, -0, 1],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
+                },
+                {
+                    "type": "move",
+                    "point": [1, -0.5, 1],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
+                },
+                {
+                    "type": "move",
+                    "point": [1, 0.5, 0],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
+                },
+                {
+                    "type": "move",
+                    "point": [-1, -0, 0],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
+                },
+                {
+                    "type": "move",
+                    "point": [0, -0, -1],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
+                },
+                {
+                    "type": "move",
+                    "point": [-1, -0, -1],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
+                },
+                {
+                    "type": "move",
+                    "point": [1, -0, -1],
+                    "target": "pred_ZBOROVNOU",
+                    "tooltip": "Pred zborovňu"
                 }
             ]
         }
